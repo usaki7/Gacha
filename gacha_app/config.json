@@ -1,0 +1,21 @@
+{
+    "prizes": [
+        {
+            "name": "一等奖",
+            "image": "images/prize1.png",
+            "weight": 1
+        },
+        {
+            "name": "二等奖",
+            "image": "images/prize2.png",
+            "weight": 3
+        },
+        {
+            "name": "三等奖",
+            "image": "images/prize3.png",
+            "weight": 6
+        }
+    ],
+    "animation_duration_ms": 1500,
+    "frame_interval_ms": 100
+}
