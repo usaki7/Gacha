@@ -5,7 +5,7 @@
 ## 结构
 
 ```
-gacha_app_skeleton/
+Gacha/
 ├── gacha_app/
 │   ├── __init__.py
 │   ├── main.py
