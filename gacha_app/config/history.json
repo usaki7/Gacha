@@ -1,0 +1,298 @@
+{
+    "draws": [
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T03:40:35.994530",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T03:40:40.102771",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T03:40:46.015582",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T03:41:05.373006",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T03:42:13.582216",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T03:44:49.999034",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T03:44:54.733385",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T03:45:01.157843",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T03:45:03.647739",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T03:48:54.479699",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T04:38:09.945033",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T04:38:12.606157",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T04:38:34.425289",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T04:54:24.246669",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品1",
+                "weight": 10,
+                "color": "#FFD700",
+                "image": "resources/images/prize1.png"
+            },
+            "timestamp": "2025-06-23T05:07:32.822430",
+            "index": 0
+        },
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T05:07:36.005471",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T05:07:38.773194",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T05:07:45.150293",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T05:08:39.578539",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品1",
+                "weight": 10,
+                "color": "#FFD700",
+                "image": "resources/images/prize1.png"
+            },
+            "timestamp": "2025-06-23T05:08:42.482327",
+            "index": 0
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T05:09:15.479851",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T05:14:58.318259",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources/images/prize3.png"
+            },
+            "timestamp": "2025-06-23T05:20:19.995587",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品2",
+                "weight": 20,
+                "color": "#C0C0C0",
+                "image": "resources/images/prize2.png"
+            },
+            "timestamp": "2025-06-23T05:22:05.834766",
+            "index": 1
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources\\images\\屏幕截图 2024-09-30 031423.png"
+            },
+            "timestamp": "2025-06-23T05:23:31.724262",
+            "index": 2
+        },
+        {
+            "prize": {
+                "name": "奖品1",
+                "weight": 10,
+                "color": "#FFD700",
+                "image": "resources/images/prize1.png"
+            },
+            "timestamp": "2025-06-23T05:23:34.048436",
+            "index": 0
+        },
+        {
+            "prize": {
+                "name": "奖品1",
+                "weight": 10,
+                "color": "#FFD700",
+                "image": "resources/images/prize1.png"
+            },
+            "timestamp": "2025-06-23T05:47:48.467804",
+            "index": 0
+        },
+        {
+            "prize": {
+                "name": "奖品3",
+                "weight": 30,
+                "color": "#CD7F32",
+                "image": "resources\\images\\屏幕截图 2024-09-30 031423.png"
+            },
+            "timestamp": "2025-06-23T05:51:37.624814",
+            "index": 2
+        }
+    ],
+    "statistics": {
+        "奖品2": {
+            "count": 8,
+            "color": "#C0C0C0"
+        },
+        "奖品3": {
+            "count": 16,
+            "color": "#CD7F32"
+        },
+        "奖品1": {
+            "count": 4,
+            "color": "#FFD700"
+        }
+    }
+}

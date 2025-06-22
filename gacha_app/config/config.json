@@ -1,0 +1,27 @@
+{
+    "prizes": [
+        {
+            "name": "奖品1",
+            "image": "resources/images/prize1.png",
+            "weight": 10,
+            "color": "#FFD700"
+        },
+        {
+            "name": "奖品2",
+            "image": "resources/images/prize2.png",
+            "weight": 20,
+            "color": "#C0C0C0"
+        },
+        {
+            "name": "奖品3",
+            "image": "resources\\images\\屏幕截图 2024-09-30 031423.png",
+            "weight": 30,
+            "color": "#CD7F32"
+        }
+    ],
+    "animation_duration_ms": 1500,
+    "frame_interval_ms": 50,
+    "sound_enabled": true,
+    "theme": "default",
+    "max_prizes": 30
+}
