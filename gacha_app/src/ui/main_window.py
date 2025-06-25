@@ -92,8 +92,9 @@ class MainWindow:
             # 更新UI元素
             self.update_ui_scale()
             
-            # 更新图像
-            if hasattr(self, 'image_label') and hasattr(self, 'original_images') and self.original_images:
+            # 更新图像（但不在动画播放期间）
+            if (hasattr(self, 'image_label') and hasattr(self, 'original_images') and self.original_images and 
+                not (hasattr(self, 'animating') and self.animating)):
                 # 如果有当前结果，更新图像
                 if hasattr(self, 'current_result') and self.current_result:
                     img_idx = self.current_result.get('index', 0)
@@ -159,6 +160,34 @@ class MainWindow:
                 self.image_label.configure(image=photo)
             except Exception as e:
                 print(f"更新图像失败: {e}")
+    
+    def prepare_animation_images(self):
+        """预先准备动画所需的所有图像"""
+        try:
+            # 获取Label的当前尺寸
+            label_width = self.image_label.winfo_width()
+            label_height = self.image_label.winfo_height()
+            
+            # 计算合适的图像尺寸
+            display_size = min(label_width, label_height) * 0.8
+            scaled_size = int(max(display_size, 50))
+            
+            # 为所有奖品图像创建统一尺寸的缩放版本
+            self.scaled_images = []
+            for i, original_img in enumerate(self.original_images):
+                try:
+                    img = original_img.resize((scaled_size, scaled_size), Image.LANCZOS)
+                    photo = ImageTk.PhotoImage(img)
+                    self.scaled_images.append(photo)
+                except Exception as e:
+                    print(f"预处理图像 {i} 失败: {e}")
+                    # 使用默认图像
+                    if i < len(self.images):
+                        self.scaled_images.append(self.images[i])
+                    else:
+                        self.scaled_images.append(None)
+        except Exception as e:
+            print(f"预处理动画图像失败: {e}")
         
     def create_app_icon(self):
         """创建应用图标"""
@@ -376,6 +405,10 @@ class MainWindow:
     
     def on_label_resize(self, event):
         """当图像标签大小变化时调整图像"""
+        # 如果正在播放动画，不要调整图像大小
+        if hasattr(self, 'animating') and self.animating:
+            return
+            
         if hasattr(self, 'current_result') and self.current_result:
             img_idx = self.current_result.get('index', 0)
         else:
@@ -399,6 +432,10 @@ class MainWindow:
             else:
                 self.animating = False
                 self.draw_btn.config(state=tk.NORMAL, relief=tk.RAISED)
+                # 动画结束后，确保图像尺寸正确
+                if hasattr(self, 'current_result') and self.current_result:
+                    img_idx = self.current_result.get('index', 0)
+                    self.update_displayed_image(img_idx)
     
     def show_result(self, result):
         """显示抽奖结果"""
@@ -551,6 +588,8 @@ class MainWindow:
         # 生成动画帧
         result = self.gacha_engine.draw()
         if result:
+            # 预先确保所有动画帧的图像都已正确缩放
+            self.prepare_animation_images()
             frames = self.gacha_engine.generate_animation_frames(result["index"])
             self.play_frames(frames, 0, result)
         else:

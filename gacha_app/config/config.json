@@ -2,21 +2,18 @@
     "prizes": [
         {
             "name": "奖品1",
-            "image": "resources/images/prize1.png",
             "weight": 10,
-            "color": "#FFD700"
+            "image": "resources\\images\\1be1da1f323bf5b9d1898ccf571b2646.png"
         },
         {
             "name": "奖品2",
-            "image": "resources/images/prize2.png",
             "weight": 20,
-            "color": "#C0C0C0"
+            "image": "resources\\images\\69a8f83a7aed2ed8772488d0434bc502.png"
         },
         {
             "name": "奖品3",
-            "image": "resources\\images\\屏幕截图 2024-09-30 031423.png",
             "weight": 30,
-            "color": "#CD7F32"
+            "image": "resources\\images\\664e4bdfd6025a788b691ed511425a3b.png"
         }
     ],
     "animation_duration_ms": 1500,

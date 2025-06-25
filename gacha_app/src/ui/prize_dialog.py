@@ -263,11 +263,21 @@ class PrizeEditDialog:
         # 图片
         ttk.Label(form_frame, text="奖品图片:").grid(row=2, column=0, sticky=tk.W, pady=5)
         img_frame = ttk.Frame(form_frame)
-        img_frame.grid(row=2, column=1, columnspan=2, sticky=tk.W, pady=5)
+        img_frame.grid(row=2, column=1, columnspan=2, sticky=tk.EW, pady=5)
         
-        self.image_label = ttk.Label(img_frame, text=os.path.basename(self.image_path) if self.image_path else "未选择")
-        self.image_label.pack(side=tk.LEFT)
-        ttk.Button(img_frame, text="浏览...", command=self.browse_image).pack(side=tk.LEFT, padx=5)
+        # 使用网格布局来确保按钮始终可见
+        img_frame.columnconfigure(0, weight=1)  # 让标签列可以扩展
+        img_frame.columnconfigure(1, weight=0)  # 让按钮列保持固定
+        
+        # 图片路径标签，设置最大宽度并截断长文件名
+        filename = os.path.basename(self.image_path) if self.image_path else "未选择"
+        if len(filename) > 25:  # 如果文件名太长，截断并添加省略号
+            filename = filename[:22] + "..."
+        self.image_label = ttk.Label(img_frame, text=filename, width=25)
+        self.image_label.grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
+        
+        # 浏览按钮，固定宽度
+        ttk.Button(img_frame, text="浏览...", command=self.browse_image, width=8).grid(row=0, column=1, sticky=tk.E)
         
         # 右侧预览
         preview_frame = ttk.LabelFrame(main_frame, text="预览", padding=10)
@@ -292,6 +302,7 @@ class PrizeEditDialog:
         # 配置网格
         main_frame.columnconfigure(0, weight=1)
         main_frame.columnconfigure(1, weight=0)
+        form_frame.columnconfigure(1, weight=1)  # 让表单的第二列可以扩展
     
     def browse_image(self):
         """浏览图片"""
@@ -319,7 +330,12 @@ class PrizeEditDialog:
             # 更新路径为相对路径
             rel_path = os.path.join('resources', 'images', base_name)
             self.image_path = rel_path
-            self.image_label.config(text=base_name)
+            
+            # 截断长文件名
+            display_name = base_name
+            if len(display_name) > 25:
+                display_name = display_name[:22] + "..."
+            self.image_label.config(text=display_name)
             self.update_preview()
             
     def update_preview(self):

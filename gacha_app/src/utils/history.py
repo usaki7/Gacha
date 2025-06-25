@@ -21,6 +21,11 @@ class History:
         except Exception as e:
             print(f"加载历史记录失败: {e}")
             return self._create_default_history()
+    
+    def get_all_records(self):
+        """获取所有抽奖记录"""
+        history_data = self.load()
+        return history_data.get('draws', [])
             
     def save(self, history_data):
         """保存历史记录"""
@@ -42,8 +47,7 @@ class History:
             'prize': {
                 'name': prize_data['prize']['name'],
                 'weight': prize_data['prize']['weight'],
-                'color': prize_data['prize']['color'],
-                'image': prize_data['prize']['image']
+                'image': prize_data['prize'].get('image', '')
             },
             'timestamp': prize_data['timestamp'],
             'index': prize_data['index']
@@ -74,12 +78,10 @@ class History:
         
         for draw in history_data.get('draws', []):
             prize_name = draw['prize']['name']
-            prize_color = draw['prize']['color']
             
             if prize_name not in stats:
                 stats[prize_name] = {
-                    'count': 0,
-                    'color': prize_color
+                    'count': 0
                 }
             stats[prize_name]['count'] += 1
         
